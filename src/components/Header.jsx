@@ -14,7 +14,7 @@ const Header = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/faq', label: 'FAQ' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/contact', label: 'Contact' }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -40,8 +40,8 @@ const Header = () => {
                 to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   isActive(item.path)
-                    ? 'text-bright-orange bg-navy-blue/50'
-                    : 'text-cream-white hover:text-bright-orange'
+                    ? 'text-bright-orange bg-dark-gray/50 border-b-2 border-bright-orange'
+                    : 'text-cream-white hover:text-bright-orange hover:bg-dark-gray/30'
                 }`}
               >
                 {item.label}
@@ -52,12 +52,9 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md hover:bg-navy-blue/50 transition-colors"
+            className="md:hidden p-2 rounded-md hover:bg-dark-gray/50 transition-colors"
           >
-            <SafeIcon
-              icon={isMenuOpen ? FiX : FiMenu}
-              className="w-6 h-6"
-            />
+            <SafeIcon icon={isMenuOpen ? FiX : FiMenu} className="w-6 h-6" />
           </button>
         </div>
 
@@ -67,7 +64,7 @@ const Header = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden pb-4 border-t border-soft-gray/20"
+            className="md:hidden pb-4 border-t border-text-muted/30"
           >
             <div className="flex flex-col space-y-2 mt-4">
               {navItems.map((item) => (
@@ -77,8 +74,8 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'text-bright-orange bg-navy-blue/50'
-                      : 'text-cream-white hover:text-bright-orange'
+                      ? 'text-bright-orange bg-dark-gray/50'
+                      : 'text-cream-white hover:text-bright-orange hover:bg-dark-gray/30'
                   }`}
                 >
                   {item.label}

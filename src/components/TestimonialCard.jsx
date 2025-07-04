@@ -9,23 +9,19 @@ const TestimonialCard = ({ quote, author, title, rating = 5 }) => {
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="bg-cream-white p-6 rounded-lg shadow-lg border border-soft-gray/20"
+      className="bg-bg-primary p-6 rounded-lg shadow-lg border border-text-muted/20"
     >
       <div className="flex mb-4">
         {[...Array(rating)].map((_, i) => (
-          <SafeIcon
-            key={i}
-            icon={FiStar}
-            className="w-5 h-5 text-bright-orange fill-current"
-          />
+          <SafeIcon key={i} icon={FiStar} className="w-5 h-5 text-bright-orange fill-current" />
         ))}
       </div>
-      <blockquote className="text-navy-blue mb-4 italic">
+      <blockquote className="text-text-secondary mb-4 italic text-lg">
         "{quote}"
       </blockquote>
-      <div className="border-t border-soft-gray/20 pt-4">
-        <p className="font-semibold text-navy-blue">{author}</p>
-        <p className="text-soft-gray text-sm">{title}</p>
+      <div className="border-t border-text-muted/20 pt-4">
+        <p className="font-semibold text-text-primary">{author}</p>
+        <p className="text-text-muted text-sm">{title}</p>
       </div>
     </motion.div>
   );

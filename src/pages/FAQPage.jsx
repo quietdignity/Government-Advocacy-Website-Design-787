@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
@@ -56,112 +57,135 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="bg-cream-white">
-      {/* Hero Section */}
-      <section className="relative bg-navy-blue text-cream-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-blue to-navy-blue/90"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl font-bold mb-6"
-            >
-              Frequently Asked <span className="text-bright-orange">Questions</span>
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl mb-8 text-soft-gray max-w-3xl mx-auto"
-            >
-              Everything you need to know about the Know Your Power system
-            </motion.p>
-          </div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>FAQ - Know Your Power Government Advocacy Training | Common Questions</title>
+        <meta name="description" content="Frequently asked questions about Know Your Power government advocacy training. Get answers about course content, access, guarantees, and more." />
+        <meta name="keywords" content="FAQ, government advocacy, training questions, course support, Know Your Power" />
+        <meta property="og:title" content="FAQ - Know Your Power Government Advocacy Training" />
+        <meta property="og:description" content="Get answers to common questions about our government advocacy training course." />
+        <link rel="canonical" href="https://knowyourpowernow.com/faq" />
+      </Helmet>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-cream-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
+      <div className="bg-bg-primary">
+        {/* Hero Section */}
+        <section className="relative text-cream-white overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751609842581-HERO.jpg')`
+            }}
+          >
+            <div className="absolute inset-0 bg-navy-blue/85"></div>
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="text-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-4xl md:text-5xl font-bold mb-6"
+              >
+                Frequently Asked <span className="text-bright-orange">Questions</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-xl md:text-2xl mb-8 text-cream-white/90 max-w-3xl mx-auto"
+              >
+                Everything you need to know about the Know Your Power system
+              </motion.p>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-bg-secondary">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-bg-primary border border-text-muted/20 rounded-lg shadow-md overflow-hidden"
+                >
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-bg-secondary transition-colors"
+                  >
+                    <h3 className="text-lg font-semibold text-text-primary pr-4">
+                      {faq.question}
+                    </h3>
+                    <SafeIcon
+                      icon={openFAQ === index ? FiChevronUp : FiChevronDown}
+                      className="w-5 h-5 text-bright-orange flex-shrink-0"
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {openFAQ === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="border-t border-text-muted/20"
+                      >
+                        <div className="px-6 py-4">
+                          <p className="text-text-secondary leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Still Have Questions Section */}
+        <section className="py-20 bg-bg-primary">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
               <motion.div
-                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-cream-white border border-soft-gray/20 rounded-lg shadow-md overflow-hidden"
+                transition={{ duration: 0.8 }}
+                className="max-w-3xl mx-auto"
               >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-light-blue transition-colors"
-                >
-                  <h3 className="text-lg font-semibold text-navy-blue pr-4">
-                    {faq.question}
-                  </h3>
-                  <SafeIcon
-                    icon={openFAQ === index ? FiChevronUp : FiChevronDown}
-                    className="w-5 h-5 text-bright-orange flex-shrink-0"
-                  />
-                </button>
-                
-                <AnimatePresence>
-                  {openFAQ === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="border-t border-soft-gray/20"
+                <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
+                  Still Have Questions?
+                </h2>
+                <p className="text-lg text-text-secondary mb-8">
+                  Our support team is here to help. Reach out with any questions about the course, 
+                  materials, or how the system can work for your specific situation.
+                </p>
+                <div className="bg-bg-secondary p-6 rounded-lg shadow-lg border border-text-muted/20">
+                  <h3 className="text-xl font-semibold text-text-primary mb-4">Contact Support</h3>
+                  <p className="text-text-secondary">
+                    <strong>Email:</strong>{' '}
+                    <a 
+                      href="mailto:support@knowyourpowernow.com"
+                      className="text-bright-orange hover:text-bright-orange/80 transition-colors"
                     >
-                      <div className="px-6 py-4">
-                        <p className="text-navy-blue leading-relaxed">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                      support@knowyourpowernow.com
+                    </a>
+                  </p>
+                  <p className="text-text-muted text-sm mt-2">
+                    We typically respond within 24 hours
+                  </p>
+                </div>
               </motion.div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Still Have Questions Section */}
-      <section className="py-20 bg-light-blue">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-3xl mx-auto"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-6">
-                Still Have Questions?
-              </h2>
-              <p className="text-lg text-soft-gray mb-8">
-                Our support team is here to help. Reach out with any questions about the course, 
-                materials, or how the system can work for your specific situation.
-              </p>
-              <div className="bg-cream-white p-6 rounded-lg shadow-lg border border-soft-gray/20">
-                <h3 className="text-xl font-semibold text-navy-blue mb-4">Contact Support</h3>
-                <p className="text-navy-blue">
-                  <strong>Email:</strong> support@knowyourpowernow.com
-                </p>
-                <p className="text-soft-gray text-sm mt-2">
-                  We typically respond within 24 hours
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 
