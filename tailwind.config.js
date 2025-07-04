@@ -7,11 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'deep-charcoal': '#2C2C2C',
-        'ember-orange': '#E56B47',
-        'warm-white': '#FEFDF8',
-        'steel-blue': '#4A6FA5',
-        'sage-gray': '#8B9A8E',
+        'navy-blue': '#1E3A8A',
+        'bright-orange': '#FB923C',
+        'cream-white': '#FFFBF5',
+        'forest-green': '#047857',
+        'soft-gray': '#6B7280',
+        'light-blue': '#DBEAFE',
+        'warm-orange': '#FED7AA',
       },
       fontFamily: {
         'sans': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],

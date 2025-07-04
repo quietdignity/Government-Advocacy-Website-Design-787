@@ -28,10 +28,10 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="bg-warm-white">
+    <div className="bg-cream-white">
       {/* Hero Section */}
-      <section className="relative bg-deep-charcoal text-warm-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal to-deep-charcoal/90"></div>
+      <section className="relative bg-navy-blue text-cream-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-blue to-navy-blue/90"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <motion.h1
@@ -40,14 +40,14 @@ const ContactPage = () => {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
-              Get in <span className="text-ember-orange">Touch</span>
+              Get in <span className="text-bright-orange">Touch</span>
             </motion.h1>
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl mb-8 text-sage-gray max-w-3xl mx-auto"
+              className="text-xl md:text-2xl mb-8 text-soft-gray max-w-3xl mx-auto"
             >
               We're here to help you succeed with government advocacy
             </motion.p>
@@ -56,7 +56,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Options */}
-      <section className="py-20 bg-warm-white">
+      <section className="py-20 bg-cream-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contactOptions.map((option, index) => (
@@ -66,20 +66,20 @@ const ContactPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-warm-white p-8 rounded-lg shadow-lg border border-sage-gray/20 text-center"
+                className="bg-cream-white p-8 rounded-lg shadow-lg border border-soft-gray/20 text-center"
               >
-                <div className="bg-ember-orange/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <SafeIcon icon={option.icon} className="w-8 h-8 text-ember-orange" />
+                <div className="bg-warm-orange w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <SafeIcon icon={option.icon} className="w-8 h-8 text-navy-blue" />
                 </div>
-                <h3 className="text-2xl font-semibold text-deep-charcoal mb-4">
+                <h3 className="text-2xl font-semibold text-navy-blue mb-4">
                   {option.title}
                 </h3>
-                <p className="text-sage-gray mb-6">
+                <p className="text-soft-gray mb-6">
                   {option.description}
                 </p>
                 <a
                   href={`mailto:${option.email}`}
-                  className="text-ember-orange hover:text-ember-orange/80 font-semibold transition-colors"
+                  className="text-bright-orange hover:text-bright-orange/80 font-semibold transition-colors"
                 >
                   {option.email}
                 </a>
@@ -90,7 +90,7 @@ const ContactPage = () => {
       </section>
 
       {/* Additional Info */}
-      <section className="py-20 bg-sage-gray/10">
+      <section className="py-20 bg-light-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
@@ -99,29 +99,29 @@ const ContactPage = () => {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-blue">
                 Response Times
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <SafeIcon icon={FiMessageSquare} className="w-6 h-6 text-ember-orange mt-1" />
+                  <SafeIcon icon={FiMessageSquare} className="w-6 h-6 text-bright-orange mt-1" />
                   <div>
-                    <h3 className="font-semibold text-deep-charcoal">Course Support</h3>
-                    <p className="text-sage-gray">We typically respond within 24 hours</p>
+                    <h3 className="font-semibold text-navy-blue">Course Support</h3>
+                    <p className="text-soft-gray">We typically respond within 24 hours</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <SafeIcon icon={FiUsers} className="w-6 h-6 text-steel-blue mt-1" />
+                  <SafeIcon icon={FiUsers} className="w-6 h-6 text-forest-green mt-1" />
                   <div>
-                    <h3 className="font-semibold text-deep-charcoal">Speaking Inquiries</h3>
-                    <p className="text-sage-gray">We respond within 48 hours</p>
+                    <h3 className="font-semibold text-navy-blue">Speaking Inquiries</h3>
+                    <p className="text-soft-gray">We respond within 48 hours</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <SafeIcon icon={FiFileText} className="w-6 h-6 text-sage-gray mt-1" />
+                  <SafeIcon icon={FiFileText} className="w-6 h-6 text-soft-gray mt-1" />
                   <div>
-                    <h3 className="font-semibold text-deep-charcoal">Media Requests</h3>
-                    <p className="text-sage-gray">Same-day response for urgent requests</p>
+                    <h3 className="font-semibold text-navy-blue">Media Requests</h3>
+                    <p className="text-soft-gray">Same-day response for urgent requests</p>
                   </div>
                 </div>
               </div>
@@ -133,14 +133,14 @@ const ContactPage = () => {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-blue">
                 What to Include
               </h2>
-              <div className="bg-warm-white p-6 rounded-lg shadow-lg border border-sage-gray/20">
-                <h3 className="text-xl font-semibold text-deep-charcoal mb-4">
+              <div className="bg-cream-white p-6 rounded-lg shadow-lg border border-soft-gray/20">
+                <h3 className="text-xl font-semibold text-navy-blue mb-4">
                   For Course Support:
                 </h3>
-                <ul className="space-y-2 text-sage-gray">
+                <ul className="space-y-2 text-soft-gray">
                   <li>• Your order number or account email</li>
                   <li>• Specific question or issue</li>
                   <li>• Screenshots if relevant</li>
@@ -148,11 +148,11 @@ const ContactPage = () => {
                 </ul>
               </div>
               
-              <div className="bg-warm-white p-6 rounded-lg shadow-lg border border-sage-gray/20">
-                <h3 className="text-xl font-semibold text-deep-charcoal mb-4">
+              <div className="bg-cream-white p-6 rounded-lg shadow-lg border border-soft-gray/20">
+                <h3 className="text-xl font-semibold text-navy-blue mb-4">
                   For Speaking Requests:
                 </h3>
-                <ul className="space-y-2 text-sage-gray">
+                <ul className="space-y-2 text-soft-gray">
                   <li>• Event date and location</li>
                   <li>• Audience size and type</li>
                   <li>• Preferred topics</li>

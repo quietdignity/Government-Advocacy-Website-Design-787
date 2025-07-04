@@ -12,7 +12,7 @@ import ContactPage from './pages/ContactPage';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-warm-white">
+      <div className="min-h-screen bg-cream-white">
         <Header />
         <motion.main
           initial={{ opacity: 0 }}

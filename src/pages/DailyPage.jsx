@@ -4,18 +4,18 @@ import CTAButton from '../components/CTAButton';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const { FiCheck, FiClock, FiGift, FiShield } = FiIcons;
+const { FiCheck, FiClock, FiGift, FiShield, FiPlay } = FiIcons;
 
 const DailyPage = () => {
   const benefits = [
-    "Save $500 - Your price: $1,497 (Regular: $1,997)",
+    "Save $500 - Your price: $997 (Regular: $1,497)",
     "Bonus Audio Module: \"How Journalists Think About Government\"",
     "Special Q&A Access: Monthly calls for Daily Note listeners only",
     "Extended Guarantee: 90 days instead of 60"
   ];
 
   const included = [
-    "Complete 6-module system",
+    "Complete training system",
     "40+ professional templates",
     "Video guides for every template",
     "Audio course",
@@ -24,19 +24,19 @@ const DailyPage = () => {
   ];
 
   return (
-    <div className="bg-warm-white">
+    <div className="bg-cream-white">
       {/* Hero Section */}
-      <section className="relative bg-deep-charcoal text-warm-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal to-deep-charcoal/90"></div>
+      <section className="relative bg-navy-blue text-cream-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-blue to-navy-blue/90"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-ember-orange/20 border border-ember-orange/40 rounded-lg p-4 inline-block mb-8"
+              className="bg-bright-orange/20 border border-bright-orange/40 rounded-lg p-4 inline-block mb-8"
             >
-              <p className="text-ember-orange font-semibold">Welcome Daily Note Listeners!</p>
+              <p className="text-bright-orange font-semibold">Welcome Daily Note Listeners!</p>
             </motion.div>
             
             <motion.h1
@@ -52,7 +52,7 @@ const DailyPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl mb-8 text-ember-orange font-semibold"
+              className="text-xl md:text-2xl mb-8 text-bright-orange font-semibold"
             >
               Now discover how to find clarity in government systems too.
             </motion.p>
@@ -71,20 +71,71 @@ const DailyPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-lg mb-10 max-w-3xl mx-auto text-sage-gray"
+              className="text-lg mb-10 max-w-3xl mx-auto text-soft-gray"
             >
-              <strong className="text-ember-orange">Know Your Power</strong> teaches you exactly what James learned, 
+              <strong className="text-bright-orange">Know Your Power</strong> teaches you exactly what James learned, 
               with the same authentic, no-hype approach you hear every day on The Daily Note.
             </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Exclusive Benefits */}
-      <section className="py-20 bg-ember-orange/10">
+      {/* Exclusive Mini-Course */}
+      <section className="py-20 bg-warm-orange">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-navy-blue/10 rounded-lg p-8 mb-8">
+                <div className="flex items-center justify-center space-x-3 mb-4">
+                  <SafeIcon icon={FiPlay} className="w-8 h-8 text-navy-blue" />
+                  <h2 className="text-3xl md:text-4xl font-bold text-navy-blue">
+                    Exclusive Mini-Course for The Daily Note Listeners
+                  </h2>
+                </div>
+                <h3 className="text-2xl font-semibold text-navy-blue mb-4">
+                  "How Journalists Think About Government"
+                </h3>
+                <p className="text-lg text-navy-blue mb-6">
+                  This exclusive audio module reveals the insider perspective on how government really operates. 
+                  You'll learn the same mental frameworks that award-winning journalists use to understand and navigate 
+                  government systems.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-cream-white/50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-navy-blue mb-2">What You'll Discover:</h4>
+                    <ul className="text-sm text-navy-blue space-y-1">
+                      <li>• How journalists identify real power players</li>
+                      <li>• The questions that unlock government secrets</li>
+                      <li>• Why some stories get covered (and others don't)</li>
+                      <li>• How to think like an investigative reporter</li>
+                    </ul>
+                  </div>
+                  <div className="bg-cream-white/50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-navy-blue mb-2">Perfect For:</h4>
+                    <ul className="text-sm text-navy-blue space-y-1">
+                      <li>• Daily Note listeners who want insider access</li>
+                      <li>• Anyone curious about government operations</li>
+                      <li>• People who want to understand the news better</li>
+                      <li>• Citizens ready to engage more effectively</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Exclusive Benefits */}
+      <section className="py-20 bg-light-blue">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-6">
               Exclusive Daily Note Listener Benefits
             </h2>
           </div>
@@ -96,10 +147,10 @@ const DailyPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start space-x-3 bg-warm-white p-6 rounded-lg shadow-md"
+                className="flex items-start space-x-3 bg-cream-white p-6 rounded-lg shadow-md"
               >
-                <SafeIcon icon={FiCheck} className="w-6 h-6 text-ember-orange mt-1 flex-shrink-0" />
-                <p className="text-deep-charcoal text-lg font-medium">{benefit}</p>
+                <SafeIcon icon={FiCheck} className="w-6 h-6 text-bright-orange mt-1 flex-shrink-0" />
+                <p className="text-navy-blue text-lg font-medium">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -107,7 +158,7 @@ const DailyPage = () => {
       </section>
 
       {/* What You Get */}
-      <section className="py-20 bg-warm-white">
+      <section className="py-20 bg-cream-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -116,22 +167,22 @@ const DailyPage = () => {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-blue">
                 What You Get
               </h2>
               <div className="space-y-4">
                 {included.map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <SafeIcon icon={FiCheck} className="w-5 h-5 text-ember-orange" />
-                    <span className="text-deep-charcoal">{item}</span>
+                    <SafeIcon icon={FiCheck} className="w-5 h-5 text-bright-orange" />
+                    <span className="text-navy-blue">{item}</span>
                   </div>
                 ))}
               </div>
-              <div className="bg-deep-charcoal/5 border-l-4 border-ember-orange p-6 rounded-r-lg">
-                <p className="text-lg font-semibold text-deep-charcoal mb-2">
+              <div className="bg-warm-orange border-l-4 border-bright-orange p-6 rounded-r-lg">
+                <p className="text-lg font-semibold text-navy-blue mb-2">
                   No hype. No hot takes. Just truth about how government actually works.
                 </p>
-                <p className="text-ember-orange font-medium italic">
+                <p className="text-bright-orange font-medium italic">
                   Real talk for real people who need real results.
                 </p>
               </div>
@@ -143,18 +194,18 @@ const DailyPage = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-steel-blue/10 p-8 rounded-lg border border-steel-blue/20">
+              <div className="bg-light-blue p-8 rounded-lg border border-forest-green/20">
                 <div className="flex items-center space-x-2 mb-4">
-                  <SafeIcon icon={FiGift} className="w-6 h-6 text-ember-orange" />
-                  <h3 className="text-xl font-semibold text-deep-charcoal">Daily Note Exclusive</h3>
+                  <SafeIcon icon={FiGift} className="w-6 h-6 text-bright-orange" />
+                  <h3 className="text-xl font-semibold text-navy-blue">Daily Note Exclusive</h3>
                 </div>
-                <p className="text-deep-charcoal mb-4">
+                <p className="text-navy-blue mb-4">
                   "How Journalists Think About Government" - bonus audio module revealing the insider perspective 
                   on how government really operates.
                 </p>
                 <div className="flex items-center space-x-2">
-                  <SafeIcon icon={FiClock} className="w-5 h-5 text-sage-gray" />
-                  <span className="text-sm text-sage-gray">45-minute exclusive content</span>
+                  <SafeIcon icon={FiClock} className="w-5 h-5 text-soft-gray" />
+                  <span className="text-sm text-soft-gray">Exclusive content for listeners</span>
                 </div>
               </div>
             </motion.div>
@@ -163,7 +214,7 @@ const DailyPage = () => {
       </section>
 
       {/* Limited Time Offer */}
-      <section className="py-20 bg-deep-charcoal text-warm-white">
+      <section className="py-20 bg-navy-blue text-cream-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
@@ -175,16 +226,18 @@ const DailyPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Limited Time Offer
               </h2>
-              <p className="text-xl mb-8 text-sage-gray">
+              <p className="text-xl mb-8 text-soft-gray">
                 This exclusive Daily Note listener discount expires in 7 days.
               </p>
               
-              <div className="bg-warm-white/10 rounded-lg p-8 mb-8">
+              <div className="bg-cream-white/10 rounded-lg p-8 mb-8">
+                <div className="text-4xl font-bold mb-4 text-bright-orange">$997</div>
+                <p className="text-lg line-through text-soft-gray mb-4">Regular Price: $1,497</p>
                 <div className="flex items-center justify-center space-x-2 mb-4">
-                  <SafeIcon icon={FiShield} className="w-6 h-6 text-ember-orange" />
+                  <SafeIcon icon={FiShield} className="w-6 h-6 text-bright-orange" />
                   <span className="text-lg font-semibold">90-day money-back guarantee</span>
                 </div>
-                <p className="text-sage-gray">
+                <p className="text-soft-gray">
                   Try the complete system risk-free.
                 </p>
               </div>
@@ -192,7 +245,7 @@ const DailyPage = () => {
               <CTAButton size="xl" className="mb-4">
                 Claim Your Daily Note Discount Now
               </CTAButton>
-              <p className="text-sm text-sage-gray">
+              <p className="text-sm text-soft-gray">
                 Secure payment • Instant access • 90-day guarantee for Daily Note listeners
               </p>
             </motion.div>

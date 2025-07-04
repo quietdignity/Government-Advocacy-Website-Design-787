@@ -5,9 +5,9 @@ const CTAButton = ({ children, variant = 'primary', size = 'lg', className = '',
   const baseClasses = "font-semibold rounded-lg transition-all duration-200 inline-flex items-center justify-center";
   
   const variants = {
-    primary: "bg-ember-orange text-warm-white hover:bg-ember-orange/90 shadow-lg hover:shadow-xl",
-    secondary: "bg-steel-blue text-warm-white hover:bg-steel-blue/90 shadow-lg hover:shadow-xl",
-    outline: "border-2 border-ember-orange text-ember-orange hover:bg-ember-orange hover:text-warm-white",
+    primary: "bg-bright-orange text-cream-white hover:bg-bright-orange/90 shadow-lg hover:shadow-xl",
+    secondary: "bg-forest-green text-cream-white hover:bg-forest-green/90 shadow-lg hover:shadow-xl",
+    outline: "border-2 border-bright-orange text-bright-orange hover:bg-bright-orange hover:text-cream-white",
   };
 
   const sizes = {

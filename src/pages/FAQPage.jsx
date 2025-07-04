@@ -56,10 +56,10 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="bg-warm-white">
+    <div className="bg-cream-white">
       {/* Hero Section */}
-      <section className="relative bg-deep-charcoal text-warm-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal to-deep-charcoal/90"></div>
+      <section className="relative bg-navy-blue text-cream-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-blue to-navy-blue/90"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <motion.h1
@@ -68,14 +68,14 @@ const FAQPage = () => {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
-              Frequently Asked <span className="text-ember-orange">Questions</span>
+              Frequently Asked <span className="text-bright-orange">Questions</span>
             </motion.h1>
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl mb-8 text-sage-gray max-w-3xl mx-auto"
+              className="text-xl md:text-2xl mb-8 text-soft-gray max-w-3xl mx-auto"
             >
               Everything you need to know about the Know Your Power system
             </motion.p>
@@ -84,7 +84,7 @@ const FAQPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-warm-white">
+      <section className="py-20 bg-cream-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -93,18 +93,18 @@ const FAQPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-warm-white border border-sage-gray/20 rounded-lg shadow-md overflow-hidden"
+                className="bg-cream-white border border-soft-gray/20 rounded-lg shadow-md overflow-hidden"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-sage-gray/5 transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-light-blue transition-colors"
                 >
-                  <h3 className="text-lg font-semibold text-deep-charcoal pr-4">
+                  <h3 className="text-lg font-semibold text-navy-blue pr-4">
                     {faq.question}
                   </h3>
                   <SafeIcon
                     icon={openFAQ === index ? FiChevronUp : FiChevronDown}
-                    className="w-5 h-5 text-ember-orange flex-shrink-0"
+                    className="w-5 h-5 text-bright-orange flex-shrink-0"
                   />
                 </button>
                 
@@ -115,10 +115,10 @@ const FAQPage = () => {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="border-t border-sage-gray/20"
+                      className="border-t border-soft-gray/20"
                     >
                       <div className="px-6 py-4">
-                        <p className="text-deep-charcoal leading-relaxed">
+                        <p className="text-navy-blue leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -132,7 +132,7 @@ const FAQPage = () => {
       </section>
 
       {/* Still Have Questions Section */}
-      <section className="py-20 bg-sage-gray/10">
+      <section className="py-20 bg-light-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
@@ -141,19 +141,19 @@ const FAQPage = () => {
               transition={{ duration: 0.8 }}
               className="max-w-3xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-6">
                 Still Have Questions?
               </h2>
-              <p className="text-lg text-sage-gray mb-8">
+              <p className="text-lg text-soft-gray mb-8">
                 Our support team is here to help. Reach out with any questions about the course, 
                 materials, or how the system can work for your specific situation.
               </p>
-              <div className="bg-warm-white p-6 rounded-lg shadow-lg border border-sage-gray/20">
-                <h3 className="text-xl font-semibold text-deep-charcoal mb-4">Contact Support</h3>
-                <p className="text-deep-charcoal">
+              <div className="bg-cream-white p-6 rounded-lg shadow-lg border border-soft-gray/20">
+                <h3 className="text-xl font-semibold text-navy-blue mb-4">Contact Support</h3>
+                <p className="text-navy-blue">
                   <strong>Email:</strong> support@knowyourpowernow.com
                 </p>
-                <p className="text-sage-gray text-sm mt-2">
+                <p className="text-soft-gray text-sm mt-2">
                   We typically respond within 24 hours
                 </p>
               </div>
